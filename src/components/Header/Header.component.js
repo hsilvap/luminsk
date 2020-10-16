@@ -7,6 +7,8 @@ const StyledHeader = styled.div`
   grid-template-columns: 1fr 5fr;
   align-items: center;
   min-height: 3em;
+  border-top: solid 1px lightgrey;
+  border-bottom: solid 1px lightgrey;
 `;
 const StyledButtonsWrapper = styled.div`
   display: flex;
