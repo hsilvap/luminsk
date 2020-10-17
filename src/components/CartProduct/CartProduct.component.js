@@ -10,7 +10,8 @@ const CartProductWrapper = styled.div`
   display:flex;
   flex-flow:column;
   > div > img{
-    width:80px;
+    max-width: 100px;
+    max-height: 100px;
   }
 `
 
