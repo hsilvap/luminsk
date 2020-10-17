@@ -58,8 +58,8 @@ const AllProducts = ({ data, openSidebar, addProduct }) => {
 export default AllProducts
 
 AllProducts.propTypes = {
-  loading: PropTypes.bool.isRequired,
+  loading: PropTypes.bool,
   openSidebar: PropTypes.func.isRequired,
   addProduct: PropTypes.func.isRequired,
-  data: PropTypes.any.isRequired
+  data: PropTypes.any
 }

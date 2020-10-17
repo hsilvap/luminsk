@@ -56,8 +56,14 @@ function App () {
   }
 
   useEffect(() => {
-
-  }, [currency])
+    if (data) {
+      const current = [...state]
+      current.forEach(item => {
+        item.price = data.products.find(x => x.id === item.id).price
+      })
+      setstate([...current])
+    }
+  }, [data])
   return (
     <>
       <Header totalItems={state.length} open={() => setopenSidebar(true)}/>
