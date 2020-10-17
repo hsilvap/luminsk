@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const StyledProduct = styled.div`
   display: flex;
@@ -20,7 +20,7 @@ const StyledProduct = styled.div`
     padding: 1em;
     margin: 1em;
   }
-`;
+`
 
 const Product = ({ id, price, image_url, title, addToCart }) => {
   return (
@@ -30,15 +30,15 @@ const Product = ({ id, price, image_url, title, addToCart }) => {
       <label>{`From ${price}`}</label>
       <button onClick={addToCart}>Add to Cart</button>
     </StyledProduct>
-  );
-};
+  )
+}
 
-export default Product;
+export default Product
 
 Product.propTypes = {
   id: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
   image_url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  addToCart: PropTypes.func.isRequired,
-};
+  addToCart: PropTypes.func.isRequired
+}

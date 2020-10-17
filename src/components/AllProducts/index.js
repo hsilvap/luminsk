@@ -1,1 +1,1 @@
-export { default } from "./AllProducts.component";
+export { default } from './AllProducts.component'
