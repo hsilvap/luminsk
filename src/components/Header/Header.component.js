@@ -22,7 +22,7 @@ const StyledButtonsWrapper = styled.div`
   }
 `
 
-const Header = ({ totalItems }) => {
+const Header = ({ totalItems, open }) => {
   return (
     <StyledHeader>
       <span style={{ textAlign: 'center' }}>LUMIN</span>
@@ -35,6 +35,7 @@ const Header = ({ totalItems }) => {
           <span>Account</span>
           <span style={{ margin: '0px 2em' }}>
             <img
+              onClick={open}
               style={{ width: 20, height: 20, fill: 'white' }}
               src={cart}
             >
@@ -50,5 +51,6 @@ const Header = ({ totalItems }) => {
 export default Header
 
 Header.propTypes = {
-  totalItems: PropTypes.number.isRequired
+  totalItems: PropTypes.number.isRequired,
+  open: PropTypes.func.isRequired
 }

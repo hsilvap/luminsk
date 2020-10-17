@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useQuery, gql } from '@apollo/client'
 
 import './App.css'
@@ -21,7 +21,7 @@ function App () {
   }
   `
   const { data } = useQuery(ALL_PRODUCTS)
-  console.log(data)
+
   const handleAddProduct = (product) => {
     const current = [...state]
     let newItem = current.find(x => x.id === product.id)
@@ -54,9 +54,13 @@ function App () {
     const current = [...state]
     setstate([...current].filter(x => x.id !== id))
   }
+
+  useEffect(() => {
+
+  }, [currency])
   return (
     <>
-      <Header totalItems={state.length}/>
+      <Header totalItems={state.length} open={() => setopenSidebar(true)}/>
       <AllProducts data={data} addProduct={handleAddProduct} openSidebar={() => setopenSidebar(true)}/>
       <Sidebar items={state} open={openSidebar} close={() => setopenSidebar(false)} modifyAmount={handleModifyProductAmount} removeProduct={handleRemoveProduct} currency={currency} setcurrency={setcurrency}/>
     </>
