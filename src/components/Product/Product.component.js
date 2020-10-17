@@ -2,6 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { MONEYFORMATTER } from '../../constants'
 
 const StyledProduct = styled.div`
   display: flex;
@@ -31,7 +32,7 @@ const Product = ({ id, price, image_url, title, addToCart, openSidebar }) => {
     <StyledProduct>
       <img src={image_url} alt={title} />
       <label>{title}</label>
-      <label>{`From ${price}`}</label>
+      <label>{`From ${MONEYFORMATTER.format(price)}`}</label>
       <button onClick={handleClick}>Add to Cart</button>
     </StyledProduct>
   )

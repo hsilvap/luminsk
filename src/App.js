@@ -21,7 +21,7 @@ function App () {
   }
   `
   const { data } = useQuery(ALL_PRODUCTS)
-
+  console.log(data)
   const handleAddProduct = (product) => {
     const current = [...state]
     let newItem = current.find(x => x.id === product.id)
@@ -58,7 +58,7 @@ function App () {
     <>
       <Header totalItems={state.length}/>
       <AllProducts data={data} addProduct={handleAddProduct} openSidebar={() => setopenSidebar(true)}/>
-      <Sidebar items={state} open={openSidebar} close={() => setopenSidebar(false)} modifyAmount={handleModifyProductAmount} removeProduct={handleRemoveProduct} setcurrency={setcurrency}/>
+      <Sidebar items={state} open={openSidebar} close={() => setopenSidebar(false)} modifyAmount={handleModifyProductAmount} removeProduct={handleRemoveProduct} currency={currency} setcurrency={setcurrency}/>
     </>
   )
 }

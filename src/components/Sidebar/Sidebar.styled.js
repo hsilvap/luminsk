@@ -11,6 +11,8 @@ export const BackDrop = styled.div`
 `
 
 export const StyledSidebar = styled.div`
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   height: 100%;
   background-color: whitesmoke;
   position: fixed;

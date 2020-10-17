@@ -2,6 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { MONEYFORMATTER } from '../../constants'
 
 const CartProductWrapper = styled.div`
   margin: 2em;
@@ -33,10 +34,6 @@ const FooterWrapper = styled.div`
     justify-content: space-around;
     margin-bottom: 1em;
 `
-const MONEYFORMATTER = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
-})
 
 const CartProduct = ({ id, title, amount, price, image_url, modifyAmount, removeProduct }) => {
   return <CartProductWrapper>
@@ -49,7 +46,8 @@ const CartProduct = ({ id, title, amount, price, image_url, modifyAmount, remove
         <span> {amount}</span>
         <AmountModifierWrapper onClick={() => modifyAmount(id, true)}>+</AmountModifierWrapper></AmountWrapper>
 
-      <span> {MONEYFORMATTER.format(amount * price)}</span></FooterWrapper>
+      <span> {MONEYFORMATTER.format(amount * price)}</span>
+    </FooterWrapper>
   </CartProductWrapper>
 }
 export default CartProduct
