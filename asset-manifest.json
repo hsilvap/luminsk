@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/luminsk/static/css/main.454459b4.chunk.css",
+    "main.js": "/luminsk/static/js/main.eb0a3a0d.chunk.js",
+    "main.js.map": "/luminsk/static/js/main.eb0a3a0d.chunk.js.map",
+    "runtime-main.js": "/luminsk/static/js/runtime-main.321f6bc3.js",
+    "runtime-main.js.map": "/luminsk/static/js/runtime-main.321f6bc3.js.map",
+    "static/js/2.0e1bfe9a.chunk.js": "/luminsk/static/js/2.0e1bfe9a.chunk.js",
+    "static/js/2.0e1bfe9a.chunk.js.map": "/luminsk/static/js/2.0e1bfe9a.chunk.js.map",
+    "index.html": "/luminsk/index.html",
+    "precache-manifest.9e57710b3eb3df0e6813c4a2fae73977.js": "/luminsk/precache-manifest.9e57710b3eb3df0e6813c4a2fae73977.js",
+    "service-worker.js": "/luminsk/service-worker.js",
+    "static/css/main.454459b4.chunk.css.map": "/luminsk/static/css/main.454459b4.chunk.css.map",
+    "static/js/2.0e1bfe9a.chunk.js.LICENSE.txt": "/luminsk/static/js/2.0e1bfe9a.chunk.js.LICENSE.txt",
+    "static/media/cart.svg": "/luminsk/static/media/cart.446d380d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.321f6bc3.js",
+    "static/js/2.0e1bfe9a.chunk.js",
+    "static/css/main.454459b4.chunk.css",
+    "static/js/main.eb0a3a0d.chunk.js"
+  ]
+}
