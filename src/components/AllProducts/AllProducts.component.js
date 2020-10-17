@@ -33,8 +33,7 @@ const ProductInfoSectionWrapper = styled.div`
     margin-bottom: 0px;
   }
 `
-const AllProducts = ({ loading, error, data }) => {
-  console.log(data)
+const AllProducts = ({ data, openSidebar, addProduct }) => {
   return (
     <AllProductsWrapper>
       <ProductInfoWrapper>
@@ -50,7 +49,7 @@ const AllProducts = ({ loading, error, data }) => {
       </ProductInfoWrapper>
       <ProductsWrapper>
         {data &&
-          data.products.map((prod) => <Product key={prod.id} {...prod} />)}
+          data.products.map((prod) => <Product key={prod.id} {...prod} addToCart={addProduct} openSidebar={openSidebar} />)}
       </ProductsWrapper>
     </AllProductsWrapper>
   )
@@ -60,6 +59,7 @@ export default AllProducts
 
 AllProducts.propTypes = {
   loading: PropTypes.bool.isRequired,
-  error: PropTypes.any.isRequired,
+  openSidebar: PropTypes.func.isRequired,
+  addProduct: PropTypes.func.isRequired,
   data: PropTypes.any.isRequired
 }

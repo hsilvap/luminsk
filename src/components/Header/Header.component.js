@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import cart from './../../assets/cart.svg'
@@ -21,7 +22,7 @@ const StyledButtonsWrapper = styled.div`
   }
 `
 
-const Header = () => {
+const Header = ({ totalItems }) => {
   return (
     <StyledHeader>
       <span style={{ textAlign: 'center' }}>LUMIN</span>
@@ -32,10 +33,14 @@ const Header = () => {
         </div>
         <div>
           <span>Account</span>
-          <img
-            style={{ width: 20, height: 20, fill: 'white', margin: '0px 2em' }}
-            src={cart}
-          />
+          <span style={{ margin: '0px 2em' }}>
+            <img
+              style={{ width: 20, height: 20, fill: 'white' }}
+              src={cart}
+            >
+            </img>
+            {totalItems > 0 && <span>{ totalItems }</span>}
+          </span>
         </div>
       </StyledButtonsWrapper>
     </StyledHeader>
@@ -43,3 +48,7 @@ const Header = () => {
 }
 
 export default Header
+
+Header.propTypes = {
+  totalItems: PropTypes.number.isRequired
+}

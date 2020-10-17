@@ -22,13 +22,17 @@ const StyledProduct = styled.div`
   }
 `
 
-const Product = ({ id, price, image_url, title, addToCart }) => {
+const Product = ({ id, price, image_url, title, addToCart, openSidebar }) => {
+  const handleClick = () => {
+    addToCart({ id, price, image_url, title })
+    openSidebar()
+  }
   return (
     <StyledProduct>
       <img src={image_url} alt={title} />
       <label>{title}</label>
       <label>{`From ${price}`}</label>
-      <button onClick={addToCart}>Add to Cart</button>
+      <button onClick={handleClick}>Add to Cart</button>
     </StyledProduct>
   )
 }
@@ -40,5 +44,6 @@ Product.propTypes = {
   price: PropTypes.number.isRequired,
   image_url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  addToCart: PropTypes.func.isRequired
+  addToCart: PropTypes.func.isRequired,
+  openSidebar: PropTypes.func.isRequired
 }
